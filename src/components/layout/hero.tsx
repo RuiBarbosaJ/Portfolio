@@ -51,17 +51,16 @@ export function Hero() {
             variants={fadeInUp}
             className="text-white font-bold"
             style={{
-              fontSize: "clamp(2.4rem, 6vw, 4.4rem)",
+              fontSize: "clamp(2rem, 5vw, 3.8rem)",
               lineHeight: 1.08,
               letterSpacing: "-0.03em",
             }}
           >
-            Código que vira produto: rápido, claro e bem feito. Construo
-            aprendendo, testando e{" "}
+            Interfaces modernas, rápidas e fáceis de manter.{" "}
             <span className="bg-linear-to-r from-white via-white/80 to-white/60 bg-clip-text text-transparent">
-              seguindo a curiosidade
-            </span>
-            .
+              React, Next.js e TypeScript
+            </span>{" "}
+            com foco em produto.
           </MotionH1>
 
           {/* Subheadline */}
@@ -74,9 +73,9 @@ export function Hero() {
               lineHeight: 1.75,
             }}
           >
-            Em transição do administrativo para tecnologia, trago organização,
-            visão de processo e foco em resultado para construir interfaces
-            modernas, acessíveis e fáceis de manter.
+            Trago experiência administrativa com processos e dados, aplicando
+            visão de negócio no desenvolvimento de interfaces modernas,
+            acessíveis e fáceis de manter.
           </MotionP>
 
           {/* Highlights */}
@@ -84,21 +83,21 @@ export function Hero() {
             variants={fadeInUp}
             className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto"
           >
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left">
+            <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
               <p className="text-white/70 text-sm font-semibold">Stack</p>
               <p className="text-white/45 text-sm mt-1">
                 React • Next.js • Tailwind • TypeScript
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left">
+            <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
               <p className="text-white/70 text-sm font-semibold">Foco</p>
               <p className="text-white/45 text-sm mt-1">
                 UI/UX, performance e boas práticas
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-left">
+            <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
               <p className="text-white/70 text-sm font-semibold">Diferencial</p>
               <p className="text-white/45 text-sm mt-1">
                 Visão de negócio e Analítica

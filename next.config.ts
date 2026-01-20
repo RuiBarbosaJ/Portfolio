@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    root: "/home/ruilinux/rui-junior-portfolio",
+  },
 };
 
 export default nextConfig;

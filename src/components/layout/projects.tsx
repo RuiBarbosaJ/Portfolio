@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { IoOpenOutline } from "react-icons/io5";
 import {
   MotionDiv,
@@ -45,9 +46,11 @@ function ProjectCarousel({
         >
           {images.map((img) => (
             <SwiperSlide key={img.src}>
-              <img
+              <Image
                 src={img.src}
                 alt={img.alt ?? `Preview do projeto ${title}`}
+                width={340}
+                height={190}
                 className="h-[190px] w-full object-cover"
                 loading="lazy"
               />
@@ -63,6 +66,8 @@ type Project = {
   title: string;
   description: string;
   where: string;
+  highlights: string[];
+  demo?: string;
   github: string;
   technologies: string[];
   images: { src: string; alt?: string }[];
@@ -75,8 +80,14 @@ export function Projects() {
       title: "Web Car (Aplicação de Formulários)",
       description:
         "Sistema web com navegação entre Home, Login, Cadastro, Dashboard, Dashboard (novo) e Detalhe do Carro, desenvolvido com foco em experiência do usuário. Utiliza React Hook Form + Zod para validações e Firebase para salvar dados e garantir consistência em todo o app.",
-      where: "Projeto pessoal / estudos",
-      github: "https://github.com/RuiBarbosaJ",
+      where: "Aplicação web",
+      highlights: [
+        "Fluxo completo com Home, Login, Cadastro, Dashboards e detalhes de carro",
+        "Formulários com React Hook Form + Zod e feedback de erro em tempo real",
+        "Persistência de dados no Firebase garantindo consistência entre telas",
+      ],
+      demo: "",
+      github: "https://github.com/RuiBarbosaJ/web-car",
       technologies: [
         "React",
         "TypeScript",
@@ -108,8 +119,14 @@ export function Projects() {
       title: "Dev Shop (Carrinho de Compras)",
       description:
         "Mini e-commerce com vitrine de produtos, página de detalhes e carrinho completo. Permite adicionar itens com feedback (popup), exibe quantidade total no ícone do carrinho e realiza o cálculo automático de subtotal por produto e total geral, com controle de quantidade (+/−).",
-      where: "Projeto pessoal / estudos",
-      github: "https://github.com/RuiBarbosaJ",
+      where: "Sistema demonstrativo",
+      highlights: [
+        "Carrinho com Context API e estado global compartilhado",
+        "Cálculo automático de subtotal e total geral com controle de quantidade",
+        "Componente de produto reutilizável e feedback visual ao adicionar itens",
+      ],
+      demo: "",
+      github: "https://github.com/RuiBarbosaJ/carrinho-de-compras-simples",
       technologies: ["React", "TypeScript", "Context API"],
       images: [
         {
@@ -133,8 +150,14 @@ export function Projects() {
       title: "DevCurrency (Criptomoedas)",
       description:
         "Aplicação em React + TypeScript consumindo API de criptomoedas, com busca por moeda e paginação (carregar mais). Exibe preço, valor de mercado, volume e variação em 24h em uma tabela, além de tela de detalhes por moeda.",
-      where: "Projeto pessoal / estudos",
-      github: "https://github.com/RuiBarbosaJ",
+      where: "Aplicação web",
+      highlights: [
+        "Consumo de API de criptomoedas com listagem paginada",
+        "Busca por moeda com filtro em tempo real",
+        "Tela de detalhes com informações completas por ativo",
+      ],
+      demo: "",
+      github: "https://github.com/RuiBarbosaJ/CurrencyCripto",
       technologies: ["React", "TypeScript", "API REST"],
       images: [
         { src: "/img_projetos/currency_cripto/um.png", alt: "Tabela + busca" },
@@ -151,27 +174,17 @@ export function Projects() {
     },
 
     {
-      title: "To Do List (HTML + CSS + JS)",
-      description:
-        "To-do list em HTML, CSS e JavaScript puro, com CRUD completo: adicionar, editar e salvar inline, remover itens e excluir todas as tarefas. Inclui marcação de conclusão (checkbox) e registro da data de criação, reforçando manipulação de DOM, eventos e lógica de listas no front-end.",
-      where: "Projeto pessoal / estudos",
-      github: "https://github.com/RuiBarbosaJ",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      images: [
-        {
-          src: "/img_projetos/to_do_list/um.webp",
-          alt: "Tela principal do To Do List",
-        },
-      ],
-      testId: "card-project-todolist",
-    },
-
-    {
       title: "Site de Restaurante (HTML + CSS + JS)",
       description:
         "Site de restaurante desenvolvido em HTML e CSS puro, com carrossel em JavaScript na página inicial. Possui seções de Sobre o restaurante, Eventos, Nosso cardápio e Fale conosco, criado para consolidar fundamentos de estrutura semântica, layout e estilização responsiva.",
-      where: "Projeto pessoal / estudos",
-      github: "https://github.com/RuiBarbosaJ",
+      where: "Site institucional",
+      highlights: [
+        "Landing page com seções de apresentação, eventos, cardápio e contato",
+        "Carrossel em JavaScript na página inicial",
+        "Layout responsivo com foco em semântica e leitura",
+      ],
+      demo: "",
+      github: "https://github.com/RuiBarbosaJ/RestauranteWEB-Cardapio",
       technologies: ["HTML", "CSS", "JavaScript"],
       images: [
         { src: "/img_projetos/restaurante_web_cardápio/um.webp", alt: "Home" },
@@ -285,6 +298,14 @@ export function Projects() {
                       {project.description}
                     </p>
 
+                    {project.highlights && project.highlights.length > 0 && (
+                      <ul className="mt-3 space-y-1 text-white/60 text-sm list-disc list-inside">
+                        {project.highlights.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+
                     <div className="mt-3">
                       <span
                         className="text-xs font-medium bg-white/5 text-white/50 rounded-full border border-white/10"
@@ -292,6 +313,29 @@ export function Projects() {
                       >
                         {project.where}
                       </span>
+                    </div>
+
+                    <div className="mt-4 flex flex-wrap gap-2 text-sm">
+                      {project.demo && project.demo.trim().length > 0 && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-white/70 hover:text-white"
+                        >
+                          <span>Ver demo</span>
+                          <IoOpenOutline className="w-4 h-4" />
+                        </a>
+                      )}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-white/70 hover:text-white"
+                      >
+                        <span>Ver código no GitHub</span>
+                        <IoOpenOutline className="w-4 h-4" />
+                      </a>
                     </div>
 
                     <div className="mt-4 flex flex-wrap gap-2">

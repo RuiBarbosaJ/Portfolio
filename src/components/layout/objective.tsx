@@ -51,12 +51,12 @@ export function Objective() {
               lineHeight: 1.7,
             }}
           >
-            Busco minha{" "}
+            Busco atuar como{" "}
             <strong className="text-white font-medium">
-              primeira oportunidade profissional como desenvolvedor web
+              Desenvolvedor Front-end
             </strong>
-            , onde eu possa crescer tecnicamente, contribuir com código bem
-            estruturado e evoluir junto ao time.
+            , contribuindo com interfaces escaláveis, código organizado e foco
+            em produto.
           </MotionP>
           <MotionP
             variants={fadeInUp}
@@ -67,8 +67,8 @@ export function Objective() {
               lineHeight: 1.7,
             }}
           >
-            Tenho grande interesse em ambientes que valorizem boas práticas,
-            aprendizado contínuo e desenvolvimento de sistemas reais.
+            Valorizo ambientes que priorizam boas práticas, colaboração entre
+            times e desenvolvimento de produtos digitais com impacto real.
           </MotionP>
         </MotionDiv>
       </div>

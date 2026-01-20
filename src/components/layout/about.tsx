@@ -1,4 +1,4 @@
-import { MotionDiv, MotionH2, MotionP } from "@/components/ui/motion-wrapper";
+import { MotionDiv, MotionH2 } from "@/components/ui/motion-wrapper";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -49,33 +49,24 @@ export function About() {
             style={{ marginTop: "2rem" }}
           >
             <p style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-              Tenho 19 anos, sou{" "}
+              Sou{" "}
               <strong className="text-white font-medium">
-                Desenvolvedor Web Front-end
+                Desenvolvedor Front-end
               </strong>{" "}
               com foco em{" "}
               <strong className="text-white font-medium">
                 React, Next.js, TypeScript e Tailwind CSS
               </strong>
-              .
-            </p>
-
-            <p style={{ fontSize: "1rem", lineHeight: 1.7, marginTop: "1rem" }}>
-              Tenho{" "}
+              . Tenho experiência construindo{" "}
               <strong className="text-white font-medium">
-                2 anos de prática autodidata
+                interfaces e módulos administrativos
               </strong>{" "}
-              e experiência real como{" "}
-              <strong className="text-white font-medium">freelancer</strong>,
-              desenvolvendo interfaces e{" "}
-              <strong className="text-white font-medium">
-                módulos administrativos escaláveis
-              </strong>{" "}
-              com tipagem forte, consistência visual e tradução de{" "}
+              com validações, componentes reutilizáveis e consistência visual,
+              traduzindo{" "}
               <strong className="text-white font-medium">
                 regras de negócio
-              </strong>
-              .
+              </strong>{" "}
+              em UI clara e escalável.
             </p>
 
             <p style={{ fontSize: "1rem", lineHeight: 1.7, marginTop: "1rem" }}>
@@ -92,9 +83,9 @@ export function About() {
               <strong className="text-white font-medium">
                 Versiono e organizo código com Git/GitHub
               </strong>{" "}
-              e sigo evoluindo continuamente em{" "}
+              e mantenho estudo contínuo em{" "}
               <strong className="text-white font-medium">
-                Next-js e entre outras ferramentas
+                Next.js e ferramentas de front-end
               </strong>
               .
             </p>

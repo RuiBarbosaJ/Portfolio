@@ -24,19 +24,19 @@ export function FAQ() {
   const faqs = [
     {
       q: "Qual é minha experiência profissional?",
-      a: "Tenho background em área administrativa com experiência em dados financeiros, rotinas operacionais e processos. Atualmente em transição para desenvolvimento web atualmente fazendo telas de modo freelancer para Kleimp.",
+      a: "Tenho experiência na área administrativa com dados financeiros, rotinas operacionais e processos, o que reforça visão de negócio e organização. No desenvolvimento web, atuo como Front-end construindo interfaces e módulos administrativos com foco em clareza e escalabilidade.",
     },
     {
       q: "Quais tecnologias eu utilizo?",
-      a: "Foco em React, TypeScript, Tailwind CSS, Next-js e ferramentas como Git/GitHub. Estudando continuamente.",
+      a: "Foco em React, Next.js, TypeScript, Tailwind CSS e Git/GitHub, além de bibliotecas como React Hook Form, Zod e consumo de APIs REST.",
     },
     {
       q: "Estou disponível para projetos?",
-      a: "Sim! Busco minha primeira oportunidade em desenvolvimento web.",
+      a: "Sim! Estou disponível para atuar como Desenvolvedor Front-end em modelo CLT, estágio ou freelancer.",
     },
     {
       q: "Como é minha metodologia de trabalho?",
-      a: "Priorizo código limpo, componentização, tipagem forte e documentação. Valorizo boas práticas e aprendizado contínuo.",
+      a: "Priorizo código limpo, componentização, tipagem forte, organização por feature e boas práticas de versionamento, sempre alinhado às necessidades do produto.",
     },
   ];
 
