@@ -4,7 +4,6 @@ import { FAQ } from "../components/layout/faq";
 import { Footer } from "../components/layout/footer";
 import { Hero } from "../components/layout/hero";
 import { Navigation } from "../components/layout/navigation";
-import { Objective } from "../components/layout/objective";
 import { Projects } from "../components/layout/projects";
 import { Stack } from "../components/layout/stack";
 
