@@ -55,11 +55,11 @@ export function Navigation() {
               Stack
             </a>
             <a
-              href="#projetos"
+              href="#experiencia-educacao"
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
               data-testid="link-projetos"
             >
-              Projetos
+              Experiência
             </a>
             <a
               href="https://github.com/RuiBarbosaJ"
@@ -111,12 +111,12 @@ export function Navigation() {
               Stack
             </a>
             <a
-              href="#projetos"
+              href="#experiencia-educacao"
               className="block text-base font-medium text-white"
               onClick={() => setIsOpen(false)}
               data-testid="link-projetos-mobile"
             >
-              Projetos
+              Experiência
             </a>
             <a
               href="https://github.com/RuiBarbosaJ"
