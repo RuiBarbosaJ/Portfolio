@@ -43,7 +43,7 @@ export function Hero() {
             variants={fadeInUp}
             className="text-white/40 text-xs sm:text-sm font-medium tracking-[0.25em] uppercase mb-6"
           >
-            Front-end • Typescript • React • Next.js
+            Rui barbosa de oliveira costa junior
           </MotionP>
 
           {/* Headline */}
@@ -73,23 +73,16 @@ export function Hero() {
               lineHeight: 1.75,
             }}
           >
-            Trago experiência administrativa com processos e dados, aplicando
-            visão de negócio no desenvolvimento de interfaces modernas,
-            acessíveis e fáceis de manter.
+            Trago experiência administrativa com processos e dados sensíveis,
+            aplicando visão de negócio no desenvolvimento de interfaces
+            modernas, acessíveis e fáceis de manter.
           </MotionP>
 
           {/* Highlights */}
           <MotionDiv
             variants={fadeInUp}
-            className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto"
+            className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto"
           >
-            <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
-              <p className="text-white/70 text-sm font-semibold">Stack</p>
-              <p className="text-white/45 text-sm mt-1">
-                React • Next.js • Tailwind • TypeScript
-              </p>
-            </div>
-
             <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
               <p className="text-white/70 text-sm font-semibold">Foco</p>
               <p className="text-white/45 text-sm mt-1">

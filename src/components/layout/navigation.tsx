@@ -34,9 +34,8 @@ export function Navigation() {
             className="text-base font-semibold tracking-tight text-white"
             data-testid="link-home"
           >
-            Rui Barbosa
             <MotionP className="text-white/40 text-xs sm:text-sm font-medium tracking-[0.25em] uppercase mb-6">
-              Portfólio
+              Portfólio - Rui Barbosa
             </MotionP>
           </a>
 

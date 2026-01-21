@@ -23,10 +23,6 @@ export function FAQ() {
 
   const faqs = [
     {
-      q: "Qual é minha experiência profissional?",
-      a: "Tenho experiência na área administrativa com dados financeiros, rotinas operacionais e processos, o que reforça visão de negócio e organização. No desenvolvimento web, atuo como Front-end construindo interfaces e módulos administrativos com foco em clareza e escalabilidade.",
-    },
-    {
       q: "Quais tecnologias eu utilizo?",
       a: "Foco em React, Next.js, TypeScript, Tailwind CSS e Git/GitHub, além de bibliotecas como React Hook Form, Zod e consumo de APIs REST.",
     },

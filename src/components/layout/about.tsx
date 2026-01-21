@@ -49,24 +49,32 @@ export function About() {
             style={{ marginTop: "2rem" }}
           >
             <p style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-              Sou{" "}
+              Opa, sou{" "}
               <strong className="text-white font-medium">
                 Desenvolvedor Front-end
               </strong>{" "}
-              com foco em{" "}
+              e crio{" "}
               <strong className="text-white font-medium">
-                React, Next.js, TypeScript e Tailwind CSS
+                telas modernas e responsivas
+              </strong>{" "}
+              com atenção a performance e consistência visual. Trabalho com{" "}
+              <strong className="text-white font-medium">
+                React, Next.js, TypeScript, Tailwind CSS e ShadCN UI
               </strong>
-              . Tenho experiência construindo{" "}
+              . Atualmente desenvolvo{" "}
               <strong className="text-white font-medium">
-                interfaces e módulos administrativos
+                telas para o projeto da Kleimp
               </strong>{" "}
-              com validações, componentes reutilizáveis e consistência visual,
-              traduzindo{" "}
+              e também em{" "}
               <strong className="text-white font-medium">
-                regras de negócio
+                projetos próprios
+              </strong>
+              , transformando{" "}
+              <strong className="text-white font-medium">
+                ideias e regras de negócio
               </strong>{" "}
-              em UI clara e escalável.
+              em interfaces claras e fáceis de usar — sempre com curiosidade por
+              entender o “porquê” por trás de cada solução.
             </p>
 
             <p style={{ fontSize: "1rem", lineHeight: 1.7, marginTop: "1rem" }}>
@@ -80,14 +88,6 @@ export function About() {
               </strong>
               , o que reforça minha disciplina, comunicação e atenção a detalhes
               no desenvolvimento.{" "}
-              <strong className="text-white font-medium">
-                Versiono e organizo código com Git/GitHub
-              </strong>{" "}
-              e mantenho estudo contínuo em{" "}
-              <strong className="text-white font-medium">
-                Next.js e ferramentas de front-end
-              </strong>
-              .
             </p>
           </MotionDiv>
         </MotionDiv>

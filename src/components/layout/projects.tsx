@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import { IoOpenOutline } from "react-icons/io5";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
 import {
   MotionDiv,
   MotionH2,
   MotionP,
   MotionA,
 } from "@/components/ui/motion-wrapper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -24,6 +24,18 @@ const staggerContainer = {
       staggerChildren: 0.1,
     },
   },
+};
+
+type Project = {
+  title: string;
+  description: string;
+  where: string;
+  highlights: string[];
+  demo?: string;
+  github: string;
+  technologies: string[];
+  images: { src: string; alt?: string }[];
+  testId: string;
 };
 
 function ProjectCarousel({
@@ -62,22 +74,10 @@ function ProjectCarousel({
   );
 }
 
-type Project = {
-  title: string;
-  description: string;
-  where: string;
-  highlights: string[];
-  demo?: string;
-  github: string;
-  technologies: string[];
-  images: { src: string; alt?: string }[];
-  testId: string;
-};
-
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "Web Car (Aplicação de Formulários)",
+      title: "Web Car (Compra e venda de carros)",
       description:
         "Sistema web com navegação entre Home, Login, Cadastro, Dashboard, Dashboard (novo) e Detalhe do Carro, desenvolvido com foco em experiência do usuário. Utiliza React Hook Form + Zod para validações e Firebase para salvar dados e garantir consistência em todo o app.",
       where: "Aplicação web",
@@ -113,41 +113,8 @@ export function Projects() {
       ],
       testId: "card-project-webcar",
     },
-
-    // ✅ NOVO PROJETO (DEV SHOP) - FICA ACIMA DO DEV CURRENCY
     {
-      title: "Dev Shop (Carrinho de Compras)",
-      description:
-        "Mini e-commerce com vitrine de produtos, página de detalhes e carrinho completo. Permite adicionar itens com feedback (popup), exibe quantidade total no ícone do carrinho e realiza o cálculo automático de subtotal por produto e total geral, com controle de quantidade (+/−).",
-      where: "Sistema demonstrativo",
-      highlights: [
-        "Carrinho com Context API e estado global compartilhado",
-        "Cálculo automático de subtotal e total geral com controle de quantidade",
-        "Componente de produto reutilizável e feedback visual ao adicionar itens",
-      ],
-      demo: "",
-      github: "https://github.com/RuiBarbosaJ/carrinho-de-compras-simples",
-      technologies: ["React", "TypeScript", "Context API"],
-      images: [
-        {
-          src: "/img_projetos/carrinho_de_compras_simples/um.webp",
-          alt: "Página principal",
-        },
-        {
-          src: "/img_projetos/carrinho_de_compras_simples/dois.webp",
-          alt: "Detalhes do produto",
-        },
-        {
-          src: "/img_projetos/carrinho_de_compras_simples/tres.webp",
-          alt: "Carrinho de compras",
-        },
-      ],
-      testId: "card-project-devshop",
-    },
-
-    // ✅ DEV CURRENCY (AGORA 3º)
-    {
-      title: "DevCurrency (Criptomoedas)",
+      title: "DevCurrency (Analise de Criptomoedas)",
       description:
         "Aplicação em React + TypeScript consumindo API de criptomoedas, com busca por moeda e paginação (carregar mais). Exibe preço, valor de mercado, volume e variação em 24h em uma tabela, além de tela de detalhes por moeda.",
       where: "Aplicação web",
@@ -172,9 +139,8 @@ export function Projects() {
       ],
       testId: "card-project-currency",
     },
-
     {
-      title: "Site de Restaurante (HTML + CSS + JS)",
+      title: "Site para Restaurante (com cardápio)",
       description:
         "Site de restaurante desenvolvido em HTML e CSS puro, com carrossel em JavaScript na página inicial. Possui seções de Sobre o restaurante, Eventos, Nosso cardápio e Fale conosco, criado para consolidar fundamentos de estrutura semântica, layout e estilização responsiva.",
       where: "Site institucional",
@@ -207,7 +173,7 @@ export function Projects() {
 
   return (
     <section
-      id="projetos"
+      id="experiencia-educacao"
       className="bg-[#0A0A0A]"
       style={{ padding: "clamp(2.67rem, 5.33vw, 5.33rem) 0" }}
     >
@@ -225,7 +191,7 @@ export function Projects() {
             variants={fadeInUp}
             className="text-white/40 text-sm font-medium tracking-widest uppercase mb-4"
           >
-            Portfólio
+            Experiência & Educação
           </MotionP>
 
           <MotionH2
@@ -237,7 +203,7 @@ export function Projects() {
               letterSpacing: "-0.01em",
             }}
           >
-            Projetos desenvolvidos
+            Experiência & Educação
           </MotionH2>
 
           <MotionP
@@ -249,14 +215,131 @@ export function Projects() {
               lineHeight: 1.7,
             }}
           >
-            Projetos criados com foco em{" "}
-            <strong className="text-white font-medium">
-              resolver problemas reais
-            </strong>
-            , aplicando conceitos de front-end e lógica de programação.
+            Minha jornada acadêmica e profissional, incluindo formação técnica e
+            experiência prática em desenvolvimento.
           </MotionP>
 
-          <div style={{ marginTop: "2rem" }} className="space-y-3">
+          {/* ====== EDUCAÇÃO ====== */}
+          <MotionDiv
+            variants={fadeInUp}
+            className="bg-[#111111] border border-white/10 rounded-2xl"
+            style={{ padding: "1.25rem 1.5rem", marginTop: "2rem" }}
+          >
+            <h3 className="text-white font-semibold mb-3">Educação</h3>
+
+            <p
+              className="text-white/70"
+              style={{ fontSize: "0.95rem", lineHeight: 1.7 }}
+            >
+              <strong className="text-white font-medium">
+                Bacharelado em Sistemas de Informação
+              </strong>{" "}
+              - Início previsto para 2026.
+            </p>
+
+            <p
+              className="text-white/70 mt-2"
+              style={{ fontSize: "0.95rem", lineHeight: 1.7 }}
+            >
+              <strong className="text-white font-medium">
+                Formação Desenvolvedor Full Stack Python
+              </strong>{" "}
+              – Curso profissionalizante - EBAC – Escola Britânica de Artes
+              Criativas e Tecnologia – Início: 12/23 – Fim: 06/24.
+            </p>
+          </MotionDiv>
+
+          {/* ====== BLOCO "ATUALMENTE" (EXPERIÊNCIA NA KLEIMP) ====== */}
+          <MotionDiv
+            variants={fadeInUp}
+            className="bg-[#111111] border border-white/10 rounded-2xl"
+            style={{ padding: "1.25rem 1.5rem", marginTop: "2rem" }}
+          >
+            <h3 className="text-white font-semibold mb-3">
+              Experiência Profissional
+            </h3>
+
+            <p
+              className="text-white/70"
+              style={{ fontSize: "0.95rem", lineHeight: 1.7 }}
+            >
+              <strong className="text-white font-medium">Atualmente</strong>,
+              atuo no desenvolvimento de{" "}
+              <strong className="text-white font-medium">
+                módulos administrativos
+              </strong>{" "}
+              no projeto da{" "}
+              <strong className="text-white font-medium">Kleimp</strong>,
+              utilizando{" "}
+              <strong className="text-white font-medium">
+                React, Next.js, TypeScript e Tailwind CSS
+              </strong>{" "}
+              para garantir uma aplicação escalável e com tipagem forte. Também
+              implementei{" "}
+              <strong className="text-white font-medium">
+                módulo de auditoria
+              </strong>{" "}
+              (logs e históricos de ações) e{" "}
+              <strong className="text-white font-medium">
+                gestão de acessos
+              </strong>{" "}
+              (telas e fluxos de Usuários e Perfis), com foco em interfaces
+              responsivas, consistência visual e{" "}
+              <strong className="text-white font-medium">
+                organização de código com Git/GitHub
+              </strong>
+              .
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "ShadCN UI",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs font-medium bg-white/5 text-white/50 rounded-full border border-white/10"
+                  style={{ padding: "0.375rem 0.75rem" }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </MotionDiv>
+
+          {/* ====== PROJETOS RELEVANTES ====== */}
+          <MotionH2
+            variants={fadeInUp}
+            className="text-white font-bold mt-8"
+            style={{
+              fontSize: "clamp(1.5rem, 3vw, 2rem)",
+              lineHeight: 1.2,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Projetos Relevantes
+          </MotionH2>
+
+          <MotionP
+            variants={fadeInUp}
+            className="text-white/50 max-w-2xl"
+            style={{
+              marginTop: "0.5rem",
+              fontSize: "1rem",
+              lineHeight: 1.7,
+            }}
+          >
+            Seleção de projetos onde aplico front-end para{" "}
+            <strong className="text-white font-medium">entregar valor</strong>:
+            telas bem acabadas, validações confiáveis e experiência clara para o
+            usuário.
+          </MotionP>
+
+          {/* ====== LISTA DE PROJETOS ====== */}
+          <div style={{ marginTop: "1.25rem" }} className="space-y-3">
             {projects.map((project) => (
               <MotionA
                 key={project.title}
@@ -327,6 +410,7 @@ export function Projects() {
                           <IoOpenOutline className="w-4 h-4" />
                         </a>
                       )}
+
                       <a
                         href={project.github}
                         target="_blank"

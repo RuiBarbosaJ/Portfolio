@@ -16,7 +16,6 @@ export default function Page() {
       <About />
       <Stack />
       <Projects />
-      <Objective />
       <FAQ />
       <CTA />
       <Footer />
