@@ -24,6 +24,7 @@ export function Stack() {
       technologies: [
         "HTML5",
         "CSS3",
+        "Python",
         "JavaScript",
         "TypeScript",
         "React",
@@ -41,10 +42,13 @@ export function Stack() {
         "Git",
         "GitHub",
         "Shadcn/ui",
+        "Inteligência Artificial (IA)",
         "Firebase",
         "Vercel",
         "Figma",
         "VS Code",
+        "Cursor",
+        "Neovim",
       ],
       description:
         "Ferramentas que uso no dia a dia para acelerar desenvolvimento, padronizar UI, versionar código e publicar projetos com consistência.",
@@ -87,7 +91,7 @@ export function Stack() {
           </MotionH2>
 
           <div
-            className="grid md:grid-cols-2"
+            className="grid md:grid-cols-2 "
             style={{ marginTop: "3rem", gap: "1rem" }}
           >
             {stacks.map((stack, index) => (
@@ -130,7 +134,7 @@ export function Stack() {
                   className="flex flex-wrap gap-2"
                   style={{ marginTop: "1.25rem" }}
                 >
-                  {stack.technologies.slice(0, 6).map((tech) => (
+                  {stack.technologies.slice(0, 15).map((tech) => (
                     <span
                       key={tech}
                       className="text-xs font-medium bg-white/5 text-white/50 rounded-full border border-white/10"
