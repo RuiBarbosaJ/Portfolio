@@ -56,11 +56,10 @@ export function Hero() {
               letterSpacing: "-0.03em",
             }}
           >
-            Interfaces modernas, rápidas e fáceis de manter.{" "}
+            Transformando regras de negócio em experiências digitais{" "}
             <span className="bg-linear-to-r from-white via-white/80 to-white/60 bg-clip-text text-transparent">
-              React, Next.js e TypeScript
+              claras e rápidas.
             </span>{" "}
-            com foco em produto.
           </MotionH1>
 
           {/* Subheadline */}
@@ -104,14 +103,6 @@ export function Hero() {
             className="flex flex-wrap justify-center gap-4"
             style={{ marginTop: "2.25rem" }}
           >
-            <a
-              href="#projetos"
-              className="inline-flex items-center justify-center bg-white text-black rounded-full font-semibold text-base hover:bg-white/90 transition-all duration-200"
-              style={{ padding: "1rem 2rem" }}
-            >
-              Ver projetos
-            </a>
-
             <a
               href="https://github.com/RuiBarbosaJ"
               target="_blank"

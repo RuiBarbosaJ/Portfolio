@@ -49,7 +49,7 @@ export function About() {
             style={{ marginTop: "2rem" }}
           >
             <p style={{ fontSize: "1rem", lineHeight: 1.7 }}>
-              Opa, sou{" "}
+              Sou{" "}
               <strong className="text-white font-medium">
                 Desenvolvedor Front-end
               </strong>{" "}
@@ -57,13 +57,10 @@ export function About() {
               <strong className="text-white font-medium">
                 telas modernas e responsivas
               </strong>{" "}
-              com atenção a performance e consistência visual. Trabalho com{" "}
+              com atenção a performance e consistência visual. Atualmente,
+              desenvolvendo{" "}
               <strong className="text-white font-medium">
-                React, Next.js, TypeScript, Tailwind CSS e ShadCN UI
-              </strong>
-              . Atualmente desenvolvo{" "}
-              <strong className="text-white font-medium">
-                telas para o projeto da Kleimp
+                soluções para a Kleimp
               </strong>{" "}
               e também em{" "}
               <strong className="text-white font-medium">
@@ -86,8 +83,8 @@ export function About() {
               <strong className="text-white font-medium">
                 dados sensíveis, processos e rotinas financeiras
               </strong>
-              , o que reforça minha disciplina, comunicação e atenção a detalhes
-              no desenvolvimento.{" "}
+              , o que reforça minha disciplina, comunicação e atenção aos
+              detalhes no desenvolvimento.{" "}
             </p>
           </MotionDiv>
         </MotionDiv>

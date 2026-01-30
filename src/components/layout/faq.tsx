@@ -28,11 +28,11 @@ export function FAQ() {
     },
     {
       q: "Estou disponível para projetos?",
-      a: "Sim! Estou disponível para atuar como Desenvolvedor Front-end em modelo CLT, estágio ou freelancer.",
+      a: "Sim! Estou disponível para atuar como Desenvolvedor Front-end em modelo CLT, PJ, estágio ou freelancer.",
     },
     {
       q: "Como é minha metodologia de trabalho?",
-      a: "Priorizo código limpo, componentização, tipagem forte, organização por feature e boas práticas de versionamento, sempre alinhado às necessidades do produto.",
+      a: "Priorizo código limpo, componentização, tipagem forte, organização e boas práticas de versionamento, sempre alinhado às necessidades do produto. Além de ser bem comunicativo e priorizar as entregas com excelência.",
     },
   ];
 
