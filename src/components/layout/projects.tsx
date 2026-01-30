@@ -103,7 +103,7 @@ export function Projects() {
                           className="text-white font-medium"
                           style={{ fontSize: "0.95rem" }}
                         >
-                          Formação Desenvolvedor Full Stack Python
+                          Formação Desenvolvedor Full Stack
                         </p>
                         <p
                           className="text-white/50 mt-1"
@@ -140,9 +140,7 @@ export function Projects() {
                 <h3 className="text-white font-semibold text-lg">
                   Experiência Profissional
                 </h3>
-                <p className="text-white/40 text-sm mt-1">
-                  Freelancer na Kleimp
-                </p>
+                <p className="text-white/40 text-sm mt-1">Kleimp</p>
               </div>
             </div>
 
