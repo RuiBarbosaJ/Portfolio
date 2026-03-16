@@ -72,8 +72,8 @@ export function CodeParticles() {
     const particles: Particle[] = [];
     for (let i = 0; i < count; i++) {
       const baseOpacity = mobile
-        ? Math.random() * 0.12 + 0.10
-        : Math.random() * 0.12 + 0.08;
+        ? Math.random() * 0.13 + 0.15
+        : Math.random() * 0.13 + 0.12;
       // Try to place particle with minimum distance from others
       let x = 0, y = 0;
       let attempts = 0;
@@ -215,17 +215,17 @@ export function CodeParticles() {
 
         // Glow layer (colored)
         const { r, g, b } = p.color;
-        ctx.shadowColor = `rgba(${r}, ${g}, ${b}, ${p.opacity * 0.7})`;
-        ctx.shadowBlur = 14;
-        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${p.opacity})`;
+        ctx.shadowColor = `rgba(${r}, ${g}, ${b}, ${p.opacity * 0.85})`;
+        ctx.shadowBlur = 18;
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${p.opacity * 1.2})`;
         ctx.fillText(p.symbol, 0, 0);
 
         // Crisp lighter layer on top (no shadow)
         ctx.shadowBlur = 0;
-        const lr = Math.min(255, r + 40);
-        const lg = Math.min(255, g + 40);
-        const lb = Math.min(255, b + 40);
-        ctx.fillStyle = `rgba(${lr}, ${lg}, ${lb}, ${p.opacity * 0.5})`;
+        const lr = Math.min(255, r + 50);
+        const lg = Math.min(255, g + 50);
+        const lb = Math.min(255, b + 50);
+        ctx.fillStyle = `rgba(${lr}, ${lg}, ${lb}, ${p.opacity * 0.65})`;
         ctx.fillText(p.symbol, 0, 0);
         ctx.restore();
       }
