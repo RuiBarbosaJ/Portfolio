@@ -67,33 +67,19 @@ export function CodeParticles() {
 
   const createParticles = useCallback((width: number, height: number) => {
     const mobile = width < 768;
-    const count = mobile ? 10 : PARTICLE_COUNT;
-    const minDist = mobile ? 80 : MIN_PARTICLE_DISTANCE;
+    const count = mobile ? 14 : PARTICLE_COUNT;
+    const minDist = mobile ? 70 : MIN_PARTICLE_DISTANCE;
     const particles: Particle[] = [];
     for (let i = 0; i < count; i++) {
       const baseOpacity = mobile
-        ? Math.random() * 0.07 + 0.04
+        ? Math.random() * 0.12 + 0.10
         : Math.random() * 0.12 + 0.08;
       // Try to place particle with minimum distance from others
       let x = 0, y = 0;
       let attempts = 0;
       do {
-        if (mobile) {
-          // On mobile, spawn in corners/edges only
-          const corner = Math.random();
-          if (corner < 0.5) {
-            // Top area
-            x = Math.random() * width;
-            y = Math.random() * height * 0.15;
-          } else {
-            // Bottom area
-            x = Math.random() * width;
-            y = height * 0.85 + Math.random() * height * 0.15;
-          }
-        } else {
-          x = Math.random() * width;
-          y = Math.random() * height;
-        }
+        x = Math.random() * width;
+        y = Math.random() * height;
         attempts++;
       } while (
         attempts < 50 &&
@@ -107,11 +93,11 @@ export function CodeParticles() {
         x,
         y,
         vx: (Math.random() - 0.5) * 0.2,
-        vy: mobile ? (Math.random() - 0.5) * 0.1 : -Math.random() * 0.18 - 0.06,
+        vy: mobile ? (Math.random() - 0.5) * 0.12 : -Math.random() * 0.18 - 0.06,
         symbol: CODE_SYMBOLS[Math.floor(Math.random() * CODE_SYMBOLS.length)],
         opacity: baseOpacity,
         baseOpacity,
-        size: mobile ? Math.random() * 3 + 8 : Math.random() * 6 + 13,
+        size: mobile ? Math.random() * 4 + 10 : Math.random() * 6 + 13,
         rotation: Math.random() * Math.PI * 2,
         rotationSpeed: (Math.random() - 0.5) * 0.003,
         color: PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)],
@@ -174,15 +160,15 @@ export function CodeParticles() {
       for (const p of particles) {
         // Responsive content exclusion zone
         if (isMobileRef.current) {
-          // Mobile: push particles to top/bottom edges
-          const centerY = h / 2;
-          const safeZoneH = h * 0.35;
-          const distFromCenterY = Math.abs(p.y - centerY);
-          if (distFromCenterY < safeZoneH) {
-            const depth = 1 - distFromCenterY / safeZoneH;
-            const pushForce = depth * 0.2;
-            p.vy += p.y < centerY ? -pushForce : pushForce;
-            p.opacity = p.baseOpacity * (0.2 + (1 - depth) * 0.8);
+          // Mobile: push particles to edges (left/right)
+          const centerX = w / 2;
+          const contentHalfWidth = w * 0.28; // narrower zone on mobile
+          const distFromCenter = Math.abs(p.x - centerX);
+          if (distFromCenter < contentHalfWidth) {
+            const depth = 1 - distFromCenter / contentHalfWidth;
+            const pushForce = depth * 0.3;
+            p.vx += p.x < centerX ? -pushForce : pushForce;
+            p.opacity = p.baseOpacity * (0.4 + (1 - depth) * 0.6);
           } else {
             p.opacity = p.baseOpacity;
           }
