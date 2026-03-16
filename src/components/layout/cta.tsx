@@ -63,12 +63,8 @@ export function CTA() {
               lineHeight: 1.7,
             }}
           >
-            Estou aberto a oportunidades como{" "}
-            <strong className="text-white font-medium">
-              desenvolvedor front-end
-            </strong>{" "}
-            e também a projetos freelance.
-            <br />
+            Busco novos desafios no front-end — se você tem um projeto ou
+            vaga, vamos conversar.
             Me chama no{" "}
             <a
               target="_blank"

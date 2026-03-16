@@ -32,7 +32,7 @@ export function Stack() {
         "Tailwind CSS",
       ],
       description:
-        "Construção de interfaces modernas e responsivas, com foco em componentes reutilizáveis, organização de UI e boa experiência do usuário.",
+        "Desenvolvimento de componentes reutilizáveis com foco em performance, acessibilidade e experiência do usuário.",
     },
     {
       icon: IoConstruct,

@@ -18,7 +18,7 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="bg-[#0A0A0A]"
+      className="bg-[#0A0A0A] relative z-2"
       style={{ padding: "clamp(2.67rem, 5.33vw, 5.33rem) 0" }}
     >
       <div
@@ -66,12 +66,12 @@ export function About() {
               <strong className="text-white font-medium">
                 projetos próprios
               </strong>
-              , transformando{" "}
+              , traduzindo{" "}
               <strong className="text-white font-medium">
-                ideias e regras de negócio
+                requisitos complexos
               </strong>{" "}
-              em interfaces claras e fáceis de usar — sempre com curiosidade por
-              entender o “porquê” por trás de cada solução.
+              em interfaces intuitivas e fáceis de usar — sempre com curiosidade
+              por entender o "porquê" por trás de cada solução.
             </p>
 
             <p style={{ fontSize: "1rem", lineHeight: 1.7, marginTop: "1rem" }}>

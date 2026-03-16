@@ -24,7 +24,7 @@ export function FAQ() {
   const faqs = [
     {
       q: "Quais tecnologias eu utilizo?",
-      a: "Foco em React, Next.js, TypeScript, Tailwind CSS e Git/GitHub, além de bibliotecas como React Hook Form, Zod e consumo de APIs REST.",
+      a: "Trabalho com o ecossistema React/Next.js e TypeScript, além de ferramentas como Tailwind CSS, Zod e Git/GitHub — você pode ver a stack completa na seção acima.",
     },
     {
       q: "Estou disponível para projetos?",
@@ -32,13 +32,13 @@ export function FAQ() {
     },
     {
       q: "Como é minha metodologia de trabalho?",
-      a: "Priorizo código limpo, componentização, tipagem forte, organização e boas práticas de versionamento, sempre alinhado às necessidades do produto. Além de ser bem comunicativo e priorizar as entregas com excelência.",
+      a: "Priorizo código legível, componentização, tipagem forte e versionamento consistente, sempre alinhado às necessidades do produto. Além de ser bem comunicativo e priorizar as entregas com excelência.",
     },
   ];
 
   return (
     <section
-      className="bg-[#0A0A0A]"
+      className="bg-[#0A0A0A] relative z-2"
       style={{ padding: "clamp(2.67rem, 5.33vw, 5.33rem) 0" }}
     >
       <div

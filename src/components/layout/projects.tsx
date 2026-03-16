@@ -21,7 +21,7 @@ export function Projects() {
   return (
     <section
       id="experiencia-educacao"
-      className="bg-[#0A0A0A]"
+      className="bg-[#0A0A0A] relative z-2"
       style={{ padding: "clamp(2.67rem, 5.33vw, 5.33rem) 0" }}
     >
       <div
@@ -231,13 +231,12 @@ export function Projects() {
                 Interfaces e Componentes
               </h4>
               <p className="text-white/60 text-sm leading-relaxed">
-                Construí interfaces responsivas e componentes reutilizáveis,
-                além de otimizar o consumo de APIs e gerenciamento de estados
-                para melhorar a experiência em consultas e atualizações de
+                Criei componentes visuais padronizados e otimizados,
+                além de melhorar o consumo de APIs e gerenciamento de estados
+                para agilizar consultas e atualizações de
                 dados. O código é organizado e versionado com
                 <span className="text-white font-medium"> Git/GitHub</span>,
-                seguindo boas práticas de manutenção e estruturação de
-                componentes.
+                mantendo padrões de estruturação e documentação do projeto.
               </p>
             </div>
 

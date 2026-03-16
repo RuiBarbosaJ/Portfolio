@@ -72,9 +72,9 @@ export function Hero() {
               lineHeight: 1.75,
             }}
           >
-            Trago experiência administrativa com processos e dados sensíveis,
-            aplicando visão de negócio no desenvolvimento de interfaces
-            modernas, acessíveis e fáceis de manter.
+            Combino vivência em gestão e processos corporativos com
+            desenvolvimento de interfaces acessíveis, performáticas e fáceis
+            de manter.
           </MotionP>
 
           {/* Highlights */}
@@ -92,7 +92,7 @@ export function Hero() {
             <div className="rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-left">
               <p className="text-white/70 text-sm font-semibold">Diferencial</p>
               <p className="text-white/45 text-sm mt-1">
-                Visão de negócio e Analítica
+                Pensamento analítico e estratégico
               </p>
             </div>
           </MotionDiv>

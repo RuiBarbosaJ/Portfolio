@@ -6,10 +6,12 @@ import { Hero } from "../components/layout/hero";
 import { Navigation } from "../components/layout/navigation";
 import { Projects } from "../components/layout/projects";
 import { Stack } from "../components/layout/stack";
+import { CodeParticles } from "../components/ui/code-particles";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative">
+      <CodeParticles />
       <Navigation />
       <Hero />
       <About />
