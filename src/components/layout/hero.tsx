@@ -1,7 +1,7 @@
 import { IoChevronDown } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { MotionDiv, MotionH1, MotionP } from "@/components/ui/motion-wrapper";
-import { DownloadCVButton } from "@/components/ui/download-cv-button";
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 18 },
@@ -115,7 +115,6 @@ export function Hero() {
               GitHub
             </a>
 
-            <DownloadCVButton />
           </MotionDiv>
 
           {/* Scroll */}
